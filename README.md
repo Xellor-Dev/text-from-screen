@@ -6,6 +6,7 @@ Simple copy text from screen
 
 SCREENSHOT="/tmp/screenshot.png"
 grim -g "$(slurp)" "$SCREENSHOT"
+# Add other languages after 'eng' -> eng+ukr+pol
 TEXT=$(tesseract "$SCREENSHOT" stdout -l eng 2>/dev/null)
 echo "$TEXT" | wl-copy
 notify-send "Text was copy from screen."
