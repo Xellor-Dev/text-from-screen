@@ -1,7 +1,8 @@
 # text-from-screen
 Simple copy text from screen 
 
-```#!/bin/bash
+```bash
+#!/bin/bash
 
 SCREENSHOT="/tmp/screenshot.png"
 grim -g "$(slurp)" "$SCREENSHOT"
