@@ -6,6 +6,6 @@ Simple copy text from screen
 
 SCREENSHOT="/tmp/screenshot.png"
 grim -g "$(slurp)" "$SCREENSHOT"
-TEXT=$(tesseract "$SCREENSHOT" stdout -l rus+pol+ukr 2>/dev/null)
+TEXT=$(tesseract "$SCREENSHOT" stdout -l ukr 2>/dev/null)
 echo "$TEXT" | wl-copy
-notify-send "Текст скопирован в буфер обмена."```
+notify-send "Text was copy from screen."```
